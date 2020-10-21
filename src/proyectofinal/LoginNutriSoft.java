@@ -28,6 +28,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     private void initComponents() {
 
         LogoLogin = new javax.swing.JLabel();
+        bgColor = new javax.swing.JLabel();
         bgLogin = new javax.swing.JPanel();
         UserTxtField = new javax.swing.JTextField();
         PassTxtField = new javax.swing.JPasswordField();
@@ -41,6 +42,9 @@ public class LoginNutriSoft extends javax.swing.JFrame {
 
         LogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LogoOfLogin.png"))); // NOI18N
         getContentPane().add(LogoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 150, 121));
+
+        bgColor.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 400));
 
         bgLogin.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -137,6 +141,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     private javax.swing.JButton SignupBtn;
     private javax.swing.JLabel UserTxt;
     private javax.swing.JTextField UserTxtField;
+    private javax.swing.JLabel bgColor;
     private javax.swing.JPanel bgLogin;
     // End of variables declaration//GEN-END:variables
 }
