@@ -40,7 +40,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LogoOfLogin.png"))); // NOI18N
+        LogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOfLogin.png"))); // NOI18N
         getContentPane().add(LogoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 150, 121));
 
         bgColor.setBackground(new java.awt.Color(255, 255, 255));
