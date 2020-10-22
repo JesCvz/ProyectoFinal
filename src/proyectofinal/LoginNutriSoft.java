@@ -28,7 +28,6 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     private void initComponents() {
 
         LogoLogin = new javax.swing.JLabel();
-        bgColor = new javax.swing.JLabel();
         bgLogin = new javax.swing.JPanel();
         UserTxtField = new javax.swing.JTextField();
         PassTxtField = new javax.swing.JPasswordField();
@@ -36,15 +35,13 @@ public class LoginNutriSoft extends javax.swing.JFrame {
         PassTxt = new javax.swing.JLabel();
         LoginBtn = new javax.swing.JButton();
         SignupBtn = new javax.swing.JButton();
+        bgColor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOfLogin.png"))); // NOI18N
         getContentPane().add(LogoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 150, 121));
-
-        bgColor.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 400));
 
         bgLogin.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -94,6 +91,10 @@ public class LoginNutriSoft extends javax.swing.JFrame {
         );
 
         getContentPane().add(bgLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 400, 250));
+
+        bgColor.setBackground(new java.awt.Color(255, 255, 255));
+        bgColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/white-background-2.jpg"))); // NOI18N
+        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
