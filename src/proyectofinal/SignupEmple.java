@@ -57,16 +57,16 @@ public class SignupEmple extends javax.swing.JFrame {
         HeaderRegEmplLayout.setHorizontalGroup(
             HeaderRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderRegEmplLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(104, 104, 104)
                 .addComponent(TitleRegEmpl)
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         HeaderRegEmplLayout.setVerticalGroup(
             HeaderRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderRegEmplLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderRegEmplLayout.createSequentialGroup()
+                .addContainerGap(11, Short.MAX_VALUE)
                 .addComponent(TitleRegEmpl)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         getContentPane().add(HeaderRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 400, 40));

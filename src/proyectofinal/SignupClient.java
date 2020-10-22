@@ -48,6 +48,7 @@ public class SignupClient extends javax.swing.JFrame {
         ShowClient = new javax.swing.JButton();
         UpdateClient = new javax.swing.JButton();
         DeleteClient = new javax.swing.JButton();
+        bgColor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,17 +63,17 @@ public class SignupClient extends javax.swing.JFrame {
             .addGroup(HeaderRegClientLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TitleRegClient)
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HeaderRegClientLayout.setVerticalGroup(
             HeaderRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderRegClientLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TitleRegClient)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(HeaderRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 450, 60));
+        getContentPane().add(HeaderRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 240, 40));
 
         NameRegClient.setText("Nombre:");
 
@@ -125,7 +126,7 @@ public class SignupClient extends javax.swing.JFrame {
                     .addComponent(DeleteClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ShowClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RegClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         PanelRegClientLayout.setVerticalGroup(
             PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,10 +163,14 @@ public class SignupClient extends javax.swing.JFrame {
                 .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CityClient)
                     .addComponent(CityTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        getContentPane().add(PanelRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 480, -1));
+        getContentPane().add(PanelRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 450, 280));
+
+        bgColor.setBackground(new java.awt.Color(255, 255, 255));
+        bgColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/white-background-2.jpg"))); // NOI18N
+        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -227,5 +232,6 @@ public class SignupClient extends javax.swing.JFrame {
     private javax.swing.JButton ShowClient;
     private javax.swing.JLabel TitleRegClient;
     private javax.swing.JButton UpdateClient;
+    private javax.swing.JLabel bgColor;
     // End of variables declaration//GEN-END:variables
 }
