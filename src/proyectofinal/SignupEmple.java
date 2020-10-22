@@ -46,7 +46,7 @@ public class SignupEmple extends javax.swing.JFrame {
         PassTxtFieldEmpl = new javax.swing.JTextField();
         RegBtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TitleRegEmpl.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
@@ -111,7 +111,7 @@ public class SignupEmple extends javax.swing.JFrame {
                             .addComponent(UserEmpl))
                         .addGap(35, 35, 35)
                         .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LastnMaTxtFieldEmpl)
+                            .addComponent(LastnMaTxtFieldEmpl, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
                             .addComponent(PhoneTxtFieldEmpl)
                             .addComponent(EmailTxtFieldEmpl)
                             .addComponent(UserTxtFieldEmpl)

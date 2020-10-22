@@ -11,7 +11,8 @@ package proyectofinal;
  */
 public class LoginNutriSoft extends javax.swing.JFrame {
 
-    
+    Menu M1 = new Menu();
+    SignupEmple R1 = new SignupEmple();
     /**
      * Creates new form LoginNutriSoft
      */
@@ -51,8 +52,18 @@ public class LoginNutriSoft extends javax.swing.JFrame {
         PassTxt.setText("Contraseña:");
 
         LoginBtn.setText("Ingresar");
+        LoginBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginBtnActionPerformed(evt);
+            }
+        });
 
         SignupBtn.setText("Registrarse");
+        SignupBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignupBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout bgLoginLayout = new javax.swing.GroupLayout(bgLogin);
         bgLogin.setLayout(bgLoginLayout);
@@ -99,6 +110,16 @@ public class LoginNutriSoft extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
+        M1.setVisible(true);  
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginBtnActionPerformed
+
+    private void SignupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupBtnActionPerformed
+        R1.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_SignupBtnActionPerformed
 
     /**
      * @param args the command line arguments

@@ -6,12 +6,16 @@
 
 package proyectofinal;
 
+import ventanas.NuevasCitas;
+
 /**
  *
  * @author jes_c
  */
 public class Menu extends javax.swing.JFrame {
-
+    
+    NuevasCitas NC = new NuevasCitas(); //Cambio de nombre a citas
+    SignupClient R2 = new SignupClient(); //Cambio de nombre a Registro Clientes
     /** Creates new form Menu */
     public Menu() {
         initComponents();
@@ -39,6 +43,11 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Agenda");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 100, 50));
 
         jButton2.setText("Pacientes");
@@ -48,21 +57,34 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 100, 50));
 
         jButton4.setText("Registro");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 100, 50));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 740, 20));
 
-        LogoLogin1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOrange.png"))); // NOI18N
-        getContentPane().add(LogoLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 630, 330));
+        LogoLogin1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOfLogin.png"))); // NOI18N
+        getContentPane().add(LogoLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 160, 130));
 
         LogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOfLogin.png"))); // NOI18N
         getContentPane().add(LogoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 121));
 
         bgColor.setBackground(new java.awt.Color(255, 255, 255));
         bgColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/white-background-2.jpg"))); // NOI18N
-        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 480));
+        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     NC.setVisible(true);   // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+     R2.setVisible(true);     // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
