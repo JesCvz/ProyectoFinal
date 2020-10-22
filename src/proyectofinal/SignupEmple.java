@@ -28,7 +28,7 @@ public class SignupEmple extends javax.swing.JFrame {
     private void initComponents() {
 
         HeaderRegEmpl = new javax.swing.JPanel();
-        Title = new javax.swing.JLabel();
+        TitleRegEmpl = new javax.swing.JLabel();
         PanelRegEmpl = new javax.swing.JPanel();
         NameRegEmpl = new javax.swing.JLabel();
         LastnPatEmpl = new javax.swing.JLabel();
@@ -49,8 +49,8 @@ public class SignupEmple extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Title.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        Title.setText("REGISTRO DE EMPLEADOS");
+        TitleRegEmpl.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        TitleRegEmpl.setText("REGISTRO DE EMPLEADOS");
 
         javax.swing.GroupLayout HeaderRegEmplLayout = new javax.swing.GroupLayout(HeaderRegEmpl);
         HeaderRegEmpl.setLayout(HeaderRegEmplLayout);
@@ -58,14 +58,14 @@ public class SignupEmple extends javax.swing.JFrame {
             HeaderRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderRegEmplLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Title)
+                .addComponent(TitleRegEmpl)
                 .addContainerGap(210, Short.MAX_VALUE))
         );
         HeaderRegEmplLayout.setVerticalGroup(
             HeaderRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderRegEmplLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Title)
+                .addComponent(TitleRegEmpl)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -211,7 +211,7 @@ public class SignupEmple extends javax.swing.JFrame {
     private javax.swing.JLabel PhoneEmpl;
     private javax.swing.JTextField PhoneTxtFieldEmpl;
     private javax.swing.JButton RegBtn;
-    private javax.swing.JLabel Title;
+    private javax.swing.JLabel TitleRegEmpl;
     private javax.swing.JLabel UserEmpl;
     private javax.swing.JTextField UserTxtFieldEmpl;
     // End of variables declaration//GEN-END:variables

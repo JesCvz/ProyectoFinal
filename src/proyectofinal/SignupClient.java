@@ -27,6 +27,8 @@ public class SignupClient extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        HeaderRegClient = new javax.swing.JPanel();
+        TitleRegClient = new javax.swing.JLabel();
         PanelRegClient = new javax.swing.JPanel();
         NameRegClient = new javax.swing.JLabel();
         LastnPaClient = new javax.swing.JLabel();
@@ -35,10 +37,42 @@ public class SignupClient extends javax.swing.JFrame {
         EmailClient = new javax.swing.JLabel();
         IdClient = new javax.swing.JLabel();
         CityClient = new javax.swing.JLabel();
-        HeaderRegClient = new javax.swing.JPanel();
+        NameTxtFieldClient = new javax.swing.JTextField();
+        LastnPaTxtFieldClient = new javax.swing.JTextField();
+        LastnMaTxtFieldClient = new javax.swing.JTextField();
+        PhoneTxtFieldClient = new javax.swing.JTextField();
+        EmailTxtFieldClient = new javax.swing.JTextField();
+        IdclientTxtFieldClient = new javax.swing.JTextField();
+        CityTxtFieldClient = new javax.swing.JTextField();
+        RegClient = new javax.swing.JButton();
+        ShowClient = new javax.swing.JButton();
+        UpdateClient = new javax.swing.JButton();
+        DeleteClient = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TitleRegClient.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        TitleRegClient.setText("REGISTRO DE CLIENTES");
+
+        javax.swing.GroupLayout HeaderRegClientLayout = new javax.swing.GroupLayout(HeaderRegClient);
+        HeaderRegClient.setLayout(HeaderRegClientLayout);
+        HeaderRegClientLayout.setHorizontalGroup(
+            HeaderRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderRegClientLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TitleRegClient)
+                .addContainerGap(224, Short.MAX_VALUE))
+        );
+        HeaderRegClientLayout.setVerticalGroup(
+            HeaderRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderRegClientLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TitleRegClient)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(HeaderRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 450, 60));
 
         NameRegClient.setText("Nombre:");
 
@@ -54,6 +88,14 @@ public class SignupClient extends javax.swing.JFrame {
 
         CityClient.setText("Ciudad:");
 
+        RegClient.setText("Registrar");
+
+        ShowClient.setText("Mostrar");
+
+        UpdateClient.setText("Actualizar");
+
+        DeleteClient.setText("Eliminar");
+
         javax.swing.GroupLayout PanelRegClientLayout = new javax.swing.GroupLayout(PanelRegClient);
         PanelRegClient.setLayout(PanelRegClientLayout);
         PanelRegClientLayout.setHorizontalGroup(
@@ -68,42 +110,63 @@ public class SignupClient extends javax.swing.JFrame {
                     .addComponent(EmailClient)
                     .addComponent(IdClient)
                     .addComponent(CityClient))
-                .addContainerGap(487, Short.MAX_VALUE))
+                .addGap(39, 39, 39)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(NameTxtFieldClient)
+                    .addComponent(LastnPaTxtFieldClient)
+                    .addComponent(LastnMaTxtFieldClient)
+                    .addComponent(PhoneTxtFieldClient)
+                    .addComponent(EmailTxtFieldClient)
+                    .addComponent(IdclientTxtFieldClient)
+                    .addComponent(CityTxtFieldClient, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                .addGap(77, 77, 77)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(UpdateClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DeleteClient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(ShowClient, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RegClient, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         PanelRegClientLayout.setVerticalGroup(
             PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelRegClientLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(NameRegClient)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NameRegClient)
+                    .addComponent(NameTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegClient))
                 .addGap(18, 18, 18)
-                .addComponent(LastnPaClient)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LastnPaClient)
+                    .addComponent(LastnPaTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ShowClient))
                 .addGap(18, 18, 18)
-                .addComponent(LastMaClient)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LastMaClient)
+                    .addComponent(LastnMaTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(UpdateClient))
                 .addGap(18, 18, 18)
-                .addComponent(PhoneClient)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PhoneClient)
+                    .addComponent(PhoneTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DeleteClient))
                 .addGap(18, 18, 18)
-                .addComponent(EmailClient)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EmailClient)
+                    .addComponent(EmailTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(IdClient)
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IdClient)
+                    .addComponent(IdclientTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(CityClient)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CityClient)
+                    .addComponent(CityTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(PanelRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, -1, -1));
-
-        javax.swing.GroupLayout HeaderRegClientLayout = new javax.swing.GroupLayout(HeaderRegClient);
-        HeaderRegClient.setLayout(HeaderRegClientLayout);
-        HeaderRegClientLayout.setHorizontalGroup(
-            HeaderRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        HeaderRegClientLayout.setVerticalGroup(
-            HeaderRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 57, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(HeaderRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 581, -1));
+        getContentPane().add(PanelRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 480, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -145,13 +208,25 @@ public class SignupClient extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CityClient;
+    private javax.swing.JTextField CityTxtFieldClient;
+    private javax.swing.JButton DeleteClient;
     private javax.swing.JLabel EmailClient;
+    private javax.swing.JTextField EmailTxtFieldClient;
     private javax.swing.JPanel HeaderRegClient;
     private javax.swing.JLabel IdClient;
+    private javax.swing.JTextField IdclientTxtFieldClient;
     private javax.swing.JLabel LastMaClient;
+    private javax.swing.JTextField LastnMaTxtFieldClient;
     private javax.swing.JLabel LastnPaClient;
+    private javax.swing.JTextField LastnPaTxtFieldClient;
     private javax.swing.JLabel NameRegClient;
+    private javax.swing.JTextField NameTxtFieldClient;
     private javax.swing.JPanel PanelRegClient;
     private javax.swing.JLabel PhoneClient;
+    private javax.swing.JTextField PhoneTxtFieldClient;
+    private javax.swing.JButton RegClient;
+    private javax.swing.JButton ShowClient;
+    private javax.swing.JLabel TitleRegClient;
+    private javax.swing.JButton UpdateClient;
     // End of variables declaration//GEN-END:variables
 }
