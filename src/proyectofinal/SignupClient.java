@@ -170,7 +170,7 @@ public class SignupClient extends javax.swing.JFrame {
 
         bgColor.setBackground(new java.awt.Color(255, 255, 255));
         bgColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/white-background-2.jpg"))); // NOI18N
-        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 350));
+        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
