@@ -11,6 +11,7 @@ package proyectofinal;
  */
 public class LoginNutriSoft extends javax.swing.JFrame {
 
+    
     /**
      * Creates new form LoginNutriSoft
      */
