@@ -27,18 +27,135 @@ public class SignupEmple extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        HeaderRegEmpl = new javax.swing.JPanel();
+        Title = new javax.swing.JLabel();
+        PanelRegEmpl = new javax.swing.JPanel();
+        NameRegEmpl = new javax.swing.JLabel();
+        LastnPatEmpl = new javax.swing.JLabel();
+        LastnMaEmpl = new javax.swing.JLabel();
+        PhoneEmpl = new javax.swing.JLabel();
+        EmailEmpl = new javax.swing.JLabel();
+        UserEmpl = new javax.swing.JLabel();
+        PassEmpl = new javax.swing.JLabel();
+        NameTxtFieldEmpl = new javax.swing.JTextField();
+        LastnPaTxtFieldEmpl = new javax.swing.JTextField();
+        LastnMaTxtFieldEmpl = new javax.swing.JTextField();
+        PhoneTxtFieldEmpl = new javax.swing.JTextField();
+        EmailTxtFieldEmpl = new javax.swing.JTextField();
+        UserTxtFieldEmpl = new javax.swing.JTextField();
+        PassTxtFieldEmpl = new javax.swing.JTextField();
+        RegBtn = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Title.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        Title.setText("REGISTRO DE EMPLEADOS");
+
+        javax.swing.GroupLayout HeaderRegEmplLayout = new javax.swing.GroupLayout(HeaderRegEmpl);
+        HeaderRegEmpl.setLayout(HeaderRegEmplLayout);
+        HeaderRegEmplLayout.setHorizontalGroup(
+            HeaderRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderRegEmplLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Title)
+                .addContainerGap(210, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        HeaderRegEmplLayout.setVerticalGroup(
+            HeaderRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderRegEmplLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Title)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        getContentPane().add(HeaderRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 400, 40));
+
+        NameRegEmpl.setText("Nombre:");
+
+        LastnPatEmpl.setText("Apellido paterno:");
+
+        LastnMaEmpl.setText("Apellido materno:");
+
+        PhoneEmpl.setText("Celular:");
+
+        EmailEmpl.setText("Email:");
+
+        UserEmpl.setText("Usuario:");
+
+        PassEmpl.setText("Contraseña:");
+
+        RegBtn.setText("Registrar");
+
+        javax.swing.GroupLayout PanelRegEmplLayout = new javax.swing.GroupLayout(PanelRegEmpl);
+        PanelRegEmpl.setLayout(PanelRegEmplLayout);
+        PanelRegEmplLayout.setHorizontalGroup(
+            PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelRegEmplLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PassEmpl)
+                    .addGroup(PanelRegEmplLayout.createSequentialGroup()
+                        .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LastnPatEmpl)
+                            .addComponent(NameRegEmpl))
+                        .addGap(37, 37, 37)
+                        .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NameTxtFieldEmpl)
+                            .addComponent(LastnPaTxtFieldEmpl, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)))
+                    .addGroup(PanelRegEmplLayout.createSequentialGroup()
+                        .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LastnMaEmpl)
+                            .addComponent(PhoneEmpl)
+                            .addComponent(EmailEmpl)
+                            .addComponent(UserEmpl))
+                        .addGap(35, 35, 35)
+                        .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LastnMaTxtFieldEmpl)
+                            .addComponent(PhoneTxtFieldEmpl)
+                            .addComponent(EmailTxtFieldEmpl)
+                            .addComponent(UserTxtFieldEmpl)
+                            .addComponent(PassTxtFieldEmpl))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(RegBtn)
+                .addContainerGap())
+        );
+        PanelRegEmplLayout.setVerticalGroup(
+            PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelRegEmplLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NameRegEmpl)
+                    .addComponent(NameTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegBtn))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LastnPatEmpl)
+                    .addComponent(LastnPaTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LastnMaEmpl)
+                    .addComponent(LastnMaTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PhoneEmpl)
+                    .addComponent(PhoneTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EmailEmpl)
+                    .addComponent(EmailTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(UserEmpl)
+                    .addComponent(UserTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PassEmpl)
+                    .addComponent(PassTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 400, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +196,23 @@ public class SignupEmple extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EmailEmpl;
+    private javax.swing.JTextField EmailTxtFieldEmpl;
+    private javax.swing.JPanel HeaderRegEmpl;
+    private javax.swing.JLabel LastnMaEmpl;
+    private javax.swing.JTextField LastnMaTxtFieldEmpl;
+    private javax.swing.JTextField LastnPaTxtFieldEmpl;
+    private javax.swing.JLabel LastnPatEmpl;
+    private javax.swing.JLabel NameRegEmpl;
+    private javax.swing.JTextField NameTxtFieldEmpl;
+    private javax.swing.JPanel PanelRegEmpl;
+    private javax.swing.JLabel PassEmpl;
+    private javax.swing.JTextField PassTxtFieldEmpl;
+    private javax.swing.JLabel PhoneEmpl;
+    private javax.swing.JTextField PhoneTxtFieldEmpl;
+    private javax.swing.JButton RegBtn;
+    private javax.swing.JLabel Title;
+    private javax.swing.JLabel UserEmpl;
+    private javax.swing.JTextField UserTxtFieldEmpl;
     // End of variables declaration//GEN-END:variables
 }
