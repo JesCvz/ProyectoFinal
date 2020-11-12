@@ -4,20 +4,94 @@
  * and open the template in the editor.
  */
 package proyectofinal;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 
-/**
- *
- * @author strange
- */
 public class LoginNutriSoft extends javax.swing.JFrame {
-
-    Menu M1 = new Menu();
+    Connection con =null;
+    Statement stmt =null;
     SignupEmple R1 = new SignupEmple();
     /**
      * Creates new form LoginNutriSoft
      */
     public LoginNutriSoft() {
         initComponents();
+        this.setTitle("Inicio de sesion");
+    }
+    
+    public void inicio()
+    {
+        String Usuario = "56";
+        String Contraseña = "C1";
+        ResultSet rs = null;     
+        String Pass = new String(PassTxtField.getPassword());
+        String cadena1,cadena2,cadena3;
+        String cap = "";
+     
+       cadena1 = UserTxtField.getText();
+       cadena2 = PassTxtField.getText();
+       String sql="SELECT* FROM  empleados WHERE usuario = '"+cadena1+"' && contraseña = '"+cadena2+"'"; 
+      
+      if(UserTxtField.getText().equals(Usuario) && Pass.equals(Contraseña))
+        {
+         Menu M1 = new Menu();
+         M1.setVisible(true);
+         dispose();
+        }
+      else if (UserTxtField.getText().equals("")) {
+         
+         javax.swing.JOptionPane.showMessageDialog(this,"Debe de ingresar datos en el campo de usuario y/o contraseña ","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+     }
+     else {
+     
+     try { 
+            String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+            String usuario = "root";
+            String contraseña = "JM5038766866"; 
+                  
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+            con = DriverManager.getConnection(url,usuario,contraseña); 
+            if ( con != null ) 
+            System.out.println("Se ha establecido una conexión a la base de datos " + "\n " + url + "\n"); 
+            stmt = con.createStatement(); 
+            rs = stmt.executeQuery("select* from empleados WHERE usuario = '"+cadena1+"' && contraseña = '"+cadena2+"'");
+            if(rs.next())
+            {
+               rs = stmt.executeQuery(sql);
+               while(rs.next()) {
+                                  javax.swing.JOptionPane.showMessageDialog(this,"Bienvenido \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                                  Menu M1 = new Menu();
+                                  M1.setVisible(true);
+                                  dispose();
+                                }
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"No hay ningun registro de ese usuario/contraseña");
+            }
+        }        
+                 
+          catch (ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
+            
+            JOptionPane.showMessageDialog(null,"Error al extraer los datos de la tabla");
+        }
+  
+      finally { 
+               if ( con != null ) { 
+                try  { 
+                      con.close(); 
+                      stmt.close(); 
+                      } catch( SQLException e ) { 
+                          System.out.println( e.getMessage()); 
+                          } 
+                        } 
+              }
+     } 
     }
 
     /**
@@ -112,9 +186,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
-        M1.setVisible(true);  
-        dispose();
-        // TODO add your handling code here:
+        inicio(); 
     }//GEN-LAST:event_LoginBtnActionPerformed
 
     private void SignupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupBtnActionPerformed

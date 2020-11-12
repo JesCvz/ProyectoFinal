@@ -59,12 +59,12 @@ public class SignupEmple extends javax.swing.JFrame {
             .addGroup(HeaderRegEmplLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(TitleRegEmpl)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
         HeaderRegEmplLayout.setVerticalGroup(
             HeaderRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderRegEmplLayout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(TitleRegEmpl)
                 .addContainerGap())
         );
@@ -152,10 +152,10 @@ public class SignupEmple extends javax.swing.JFrame {
                 .addGroup(PanelRegEmplLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PassEmpl)
                     .addComponent(PassTxtFieldEmpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 400, 290));
+        getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 400, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
