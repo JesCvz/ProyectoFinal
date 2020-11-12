@@ -5,18 +5,103 @@
  */
 package proyectofinal;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author strange
  */
 public class SignupEmple extends javax.swing.JFrame {
-
-    /**
-     * Creates new form SignupEmple
-     */
+    Connection con =null;
+    Statement stmt =null;
+    
     public SignupEmple() {
         initComponents();
     }
+    
+     public void registrar()
+   {
+       String cadena1, cadena2, cadena3, cadena4,cadena5,cadena6,cadena7;    
+      cadena1 = NameTxtFieldEmpl.getText(); //Nombre del empleado
+      cadena2 = LastnPaTxtFieldEmpl.getText();//Apellido Paterno
+      cadena3 = LastnMaTxtFieldEmpl.getText();//Apellido Materno
+      cadena4 = PhoneTxtFieldEmpl.getText();//Telefono del empleado
+      cadena5 = EmailTxtFieldEmpl.getText();//Correo del empleado
+      cadena6 = UserTxtFieldEmpl.getText();//usuario para inciar sesion
+      cadena7 = PassTxtFieldEmpl.getText();//contraseña para iniciar sesion
+
+     if (cadena1.equals("") || (cadena2.equals("")) || (cadena3.equals("")) || (cadena4.equals("")) || (cadena5.equals("")) || (cadena6.equals("")) || (cadena7.equals(""))){
+            
+     javax.swing.JOptionPane.showMessageDialog(this,"Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+     }
+     
+     else {
+        try {
+           
+            String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+            String usuario = "root";
+            String contraseña = "JM5038766866"; 
+            
+             Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+             con = DriverManager.getConnection(url,usuario,contraseña); 
+             if ( con != null ) 
+                    System.out.println("Se ha establecido una conexión a la base de datos " +  
+                                       "\n " + url ); 
+                  stmt = con.createStatement(); 
+                  ResultSet rs = stmt.executeQuery("select* from empleados");
+                        //primer registro
+                      if(rs.next()==false)
+                      {
+                        stmt.executeUpdate("INSERT INTO empleados(`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `usuario`, `contraseña`) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
+                        System.out.println("Los valores han sido agregados a la base de datos");
+                        javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                      }
+                      else
+                      {
+                          //checa que no exista un registro ya hecho con ese usuario
+                          rs = stmt.executeQuery("Select* from empleados");
+                          if(rs.next()==true)
+                          {
+                             rs = stmt.executeQuery("select* from empleados where usuario = '"+cadena6+"'");
+                             if(rs.next()==true)
+                                {
+                                javax.swing.JOptionPane.showMessageDialog(this,"¡Ya se registro este usuario!\n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                                }
+                             else
+                                {
+                                stmt.executeUpdate("INSERT INTO empleados(`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `usuario`, `contraseña`) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
+                                javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                                }
+                         }
+                      }
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException ex) {}  
+        
+        finally {
+            if (con != null) {
+                try {
+                    con.close();
+                    stmt.close();
+                } catch ( SQLException e ) { 
+                         System.out.println( e.getMessage());
+                }
+            }
+        }
+         
+        }
+        this.NameTxtFieldEmpl.setText("");
+        this.LastnPaTxtFieldEmpl.setText("");
+        this.LastnMaTxtFieldEmpl.setText("");
+        this.PhoneTxtFieldEmpl.setText("");  
+        this.EmailTxtFieldEmpl.setText("");
+        this.UserTxtFieldEmpl.setText("");
+        this.PassTxtFieldEmpl.setText("");
+      
+      
+   }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -86,6 +171,11 @@ public class SignupEmple extends javax.swing.JFrame {
         PassEmpl.setText("Contraseña:");
 
         RegBtn.setText("Registrar");
+        RegBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelRegEmplLayout = new javax.swing.GroupLayout(PanelRegEmpl);
         PanelRegEmpl.setLayout(PanelRegEmplLayout);
@@ -159,6 +249,11 @@ public class SignupEmple extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RegBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegBtnActionPerformed
+        //Ejecuta la funcion de registrar 
+        registrar();
+    }//GEN-LAST:event_RegBtnActionPerformed
 
     /**
      * @param args the command line arguments
