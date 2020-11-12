@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -171,6 +172,48 @@ public class SignupEmple extends javax.swing.JFrame {
 
         PassEmpl.setText("Contraseña:");
 
+        NameTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NameTxtFieldEmplKeyTyped(evt);
+            }
+        });
+
+        LastnPaTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                LastnPaTxtFieldEmplKeyTyped(evt);
+            }
+        });
+
+        LastnMaTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                LastnMaTxtFieldEmplKeyTyped(evt);
+            }
+        });
+
+        PhoneTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PhoneTxtFieldEmplKeyTyped(evt);
+            }
+        });
+
+        EmailTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                EmailTxtFieldEmplKeyTyped(evt);
+            }
+        });
+
+        UserTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                UserTxtFieldEmplKeyTyped(evt);
+            }
+        });
+
+        PassTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PassTxtFieldEmplKeyTyped(evt);
+            }
+        });
+
         RegBtn.setText("Registrar");
         RegBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,6 +299,91 @@ public class SignupEmple extends javax.swing.JFrame {
         //Ejecuta la funcion de registrar 
         registrar();
     }//GEN-LAST:event_RegBtnActionPerformed
+
+    private void PhoneTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PhoneTxtFieldEmplKeyTyped
+    char c = evt.getKeyChar();
+         int numerocaracteres=10;
+        
+        if(PhoneTxtFieldEmpl.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 10 digitos en el telefono");
+        }
+        
+        if((c<'0' || c> '9')) evt.consume();                                        
+    }//GEN-LAST:event_PhoneTxtFieldEmplKeyTyped
+
+    private void NameTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NameTxtFieldEmplKeyTyped
+    char c = evt.getKeyChar();
+        int numerocaracteres=25;
+
+        if(NameTxtFieldEmpl.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 25 digitos del nombre");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();     // TODO add your handling code here:
+    }//GEN-LAST:event_NameTxtFieldEmplKeyTyped
+
+    private void LastnPaTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LastnPaTxtFieldEmplKeyTyped
+        char c = evt.getKeyChar();
+        int numerocaracteres=25;
+
+        if(LastnPaTxtFieldEmpl.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 25 digitos del apellido paterno");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();        // TODO add your handling code here:
+    }//GEN-LAST:event_LastnPaTxtFieldEmplKeyTyped
+
+    private void LastnMaTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LastnMaTxtFieldEmplKeyTyped
+        char c = evt.getKeyChar();
+        int numerocaracteres=25;
+
+        if(LastnMaTxtFieldEmpl.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 25 digitos del apellido materno");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();        // TODO add your handling code here:
+    }//GEN-LAST:event_LastnMaTxtFieldEmplKeyTyped
+
+    private void EmailTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_EmailTxtFieldEmplKeyTyped
+        char c = evt.getKeyChar();
+        int numerocaracteres=30;
+
+        if(EmailTxtFieldEmpl.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 30 digitos para el correo electronico");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();    // TODO add your handling code here:
+    }//GEN-LAST:event_EmailTxtFieldEmplKeyTyped
+
+    private void UserTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UserTxtFieldEmplKeyTyped
+        char c = evt.getKeyChar();
+        int numerocaracteres=10;
+
+        if(UserTxtFieldEmpl.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 10 digitos de usuario");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();  // TODO add your handling code here:
+    }//GEN-LAST:event_UserTxtFieldEmplKeyTyped
+
+    private void PassTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PassTxtFieldEmplKeyTyped
+            char c = evt.getKeyChar();
+        int numerocaracteres=10;
+
+        if(PassTxtFieldEmpl.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 10 digitos de contraseña");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();    // TODO add your handling code here:
+    }//GEN-LAST:event_PassTxtFieldEmplKeyTyped
 
     /**
      * @param args the command line arguments

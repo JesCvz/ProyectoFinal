@@ -192,18 +192,39 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="NameTxtFieldEmpl">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="NameTxtFieldEmplKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="LastnPaTxtFieldEmpl">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="LastnPaTxtFieldEmplKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="LastnMaTxtFieldEmpl">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="LastnMaTxtFieldEmplKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="PhoneTxtFieldEmpl">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="PhoneTxtFieldEmplKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="EmailTxtFieldEmpl">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="EmailTxtFieldEmplKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="UserTxtFieldEmpl">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="UserTxtFieldEmplKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="PassTxtFieldEmpl">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="PassTxtFieldEmplKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RegBtn">
           <Properties>
