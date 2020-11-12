@@ -42,15 +42,16 @@ public class SignupEmple extends javax.swing.JFrame {
      else {
         try {
            
-            String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-            String usuario = "root";
-            String contraseña = "JM5038766866"; 
+            LoginNutriSoft LG = new LoginNutriSoft();
             
+            String url = LG.url;
+            String usuario = LG.usuario;
+            String contraseña = LG.contraseña; 
+            System.out.print(url);
              Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
              con = DriverManager.getConnection(url,usuario,contraseña); 
              if ( con != null ) 
-                    System.out.println("Se ha establecido una conexión a la base de datos " +  
-                                       "\n " + url ); 
+                    System.out.println("Se ha establecido una conexión a la base de datos "); 
                   stmt = con.createStatement(); 
                   ResultSet rs = stmt.executeQuery("select* from empleados");
                         //primer registro

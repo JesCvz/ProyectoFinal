@@ -17,6 +17,9 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     Connection con =null;
     Statement stmt =null;
     SignupEmple R1 = new SignupEmple();
+    String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    String usuario = "root";
+    String contraseña = "JM5038766866"; 
     /**
      * Creates new form LoginNutriSoft
      */
@@ -51,10 +54,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
      else {
      
      try { 
-            String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-            String usuario = "root";
-            String contraseña = "JM5038766866"; 
-                  
+                
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
             con = DriverManager.getConnection(url,usuario,contraseña); 
             if ( con != null ) 
