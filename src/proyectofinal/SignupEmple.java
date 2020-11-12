@@ -248,6 +248,7 @@ public class SignupEmple extends javax.swing.JFrame {
         getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 400, 330));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegBtnActionPerformed

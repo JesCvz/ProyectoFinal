@@ -163,7 +163,7 @@ public class SignupClient extends javax.swing.JFrame {
                 .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CityClient)
                     .addComponent(CityTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 450, 280));
@@ -173,6 +173,7 @@ public class SignupClient extends javax.swing.JFrame {
         getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
