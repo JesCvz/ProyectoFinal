@@ -18,6 +18,7 @@ public class Menu extends javax.swing.JFrame {
     InfoClientes C1 = new InfoClientes();
     NuevasCitas NC = new NuevasCitas(); //Cambio de nombre a citas
     SignupClient R2 = new SignupClient(); //Cambio de nombre a Registro Clientes
+    LoginNutriSoft Lgn = new LoginNutriSoft();
     /** Creates new form Menu */
         public Menu() {
         initComponents();
@@ -115,7 +116,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+    dispose();
+    Lgn.setVisible(true);
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
