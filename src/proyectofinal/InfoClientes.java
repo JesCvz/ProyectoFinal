@@ -76,9 +76,9 @@ public class InfoClientes extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoCBgLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(ClientReg)
-                        .addGap(18, 18, 18)
-                        .addComponent(ClientUpdt)
                         .addGap(13, 13, 13)
+                        .addComponent(ClientUpdt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ClientRmv)))
                 .addContainerGap())
         );

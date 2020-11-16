@@ -78,12 +78,12 @@ public class InfoEmpleados extends javax.swing.JFrame {
             InfoEmpBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoEmpBgLayout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(InfoEmpBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EmployRmv)
+                    .addComponent(EmployReg)
                     .addComponent(EmployUpdt)
-                    .addComponent(EmployReg))
-                .addGap(0, 12, Short.MAX_VALUE))
+                    .addComponent(EmployRmv))
+                .addContainerGap())
         );
 
         BackToMenu.setText("Menu");
