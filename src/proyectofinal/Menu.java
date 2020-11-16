@@ -6,6 +6,7 @@
 
 package proyectofinal;
 
+import java.awt.Toolkit;
 import ventanas.NuevasCitas;
 
 /**
@@ -13,12 +14,15 @@ import ventanas.NuevasCitas;
  * @author jes_c
  */
 public class Menu extends javax.swing.JFrame {
-    
+    ImcCalc CALC = new ImcCalc();
+    InfoClientes C1 = new InfoClientes();
     NuevasCitas NC = new NuevasCitas(); //Cambio de nombre a citas
     SignupClient R2 = new SignupClient(); //Cambio de nombre a Registro Clientes
     /** Creates new form Menu */
-    public Menu() {
+        public Menu() {
         initComponents();
+        this.setTitle("Menu");
+        this.setResizable(false);
     }
 
     /** This method is called from within the constructor to
@@ -33,7 +37,8 @@ public class Menu extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         LogoLogin1 = new javax.swing.JLabel();
         LogoLogin = new javax.swing.JLabel();
@@ -48,28 +53,46 @@ public class Menu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 100, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 100, 50));
 
         jButton2.setText("Pacientes");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 100, 50));
-
-        jButton3.setText("Herramientas");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 100, 50));
-
-        jButton4.setText("Registro");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 100, 50));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 100, 50));
+
+        jButton3.setText("Herramientas");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 100, 50));
+
+        jButton5.setText("Cerrar Sesion");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, 120, 50));
+
+        jButton6.setText("Empleados");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, 100, 50));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 740, 20));
 
         LogoLogin1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOfLogin.png"))); // NOI18N
         getContentPane().add(LogoLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 160, 130));
 
         LogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOfLogin.png"))); // NOI18N
-        getContentPane().add(LogoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 121));
+        getContentPane().add(LogoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 150, 100));
 
         bgColor.setBackground(new java.awt.Color(255, 255, 255));
         bgColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/white-background-2.jpg"))); // NOI18N
@@ -83,9 +106,21 @@ public class Menu extends javax.swing.JFrame {
      NC.setVisible(true);   // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-     R2.setVisible(true);     // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    CALC.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    C1.setVisible(true);   // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,7 +164,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package proyectofinal;
+import java.lang.Math;
 
 /**
  *
@@ -37,7 +38,7 @@ public class ImcCalc extends javax.swing.JFrame {
         IMCLabel = new javax.swing.JLabel();
         IMCCalcB = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         CalcTitle.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         CalcTitle.setText("Calcular IMC");
@@ -49,6 +50,11 @@ public class ImcCalc extends javax.swing.JFrame {
         IMCLabel.setText("IMC:");
 
         IMCCalcB.setText("Calcular");
+        IMCCalcB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IMCCalcBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelBgLayout = new javax.swing.GroupLayout(PanelBg);
         PanelBg.setLayout(PanelBgLayout);
@@ -105,7 +111,12 @@ public class ImcCalc extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void IMCCalcBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IMCCalcBActionPerformed
+    calcular();        // TODO add your handling code here:
+    }//GEN-LAST:event_IMCCalcBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,7 +152,17 @@ public class ImcCalc extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public void calcular(){
+        float x = Float.parseFloat(MasaTxtF.getText());
+        float y = Float.parseFloat(AlturaTxtF.getText());
+        float z;
+        
+        z = (float) (x/(Math.pow(y, 2)));
+        String resultado = String.format("%.2f",z);
+        
+        IMCTxtF.setText(resultado);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AltLabel;
     private javax.swing.JTextField AlturaTxtF;

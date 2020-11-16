@@ -44,7 +44,6 @@ public class SignupEmple extends javax.swing.JFrame {
         try {
            
             LoginNutriSoft LG = new LoginNutriSoft();
-            
             String url = LG.url;
             String usuario = LG.usuario;
             String contraseña = LG.contraseña; 
@@ -101,7 +100,7 @@ public class SignupEmple extends javax.swing.JFrame {
         this.EmailTxtFieldEmpl.setText("");
         this.UserTxtFieldEmpl.setText("");
         this.PassTxtFieldEmpl.setText("");
-      
+        
       
    }
 

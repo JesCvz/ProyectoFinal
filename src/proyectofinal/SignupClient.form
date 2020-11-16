@@ -18,7 +18,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,90,0,0,1,-14"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,103,0,0,1,-15"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -28,7 +28,7 @@
     <Container class="javax.swing.JPanel" name="HeaderRegClient">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="130" y="20" width="240" height="40"/>
+          <AbsoluteConstraints x="130" y="0" width="240" height="40"/>
         </Constraint>
       </Constraints>
 
@@ -38,7 +38,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="TitleRegClient" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="14" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -66,42 +66,59 @@
     <Container class="javax.swing.JPanel" name="PanelRegClient">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="20" y="60" width="450" height="280"/>
+          <AbsoluteConstraints x="20" y="40" width="450" height="320"/>
         </Constraint>
       </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="NameRegClient" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LastnPaClient" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LastMaClient" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="EmailClient" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="PhoneClient" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="NameTxtFieldClient" pref="150" max="32767" attributes="0"/>
+                                      <Component id="LastnPaTxtFieldClient" max="32767" attributes="0"/>
+                                      <Component id="LastnMaTxtFieldClient" max="32767" attributes="0"/>
+                                      <Component id="PhoneTxtFieldClient" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                                  <Component id="EmailTxtFieldClient" min="-2" pref="150" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="CityClient" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="NameRegClient1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="IDTxtFieldClient" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="CityTxtFieldClient" min="-2" pref="150" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="NameRegClient" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="LastnPaClient" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="LastMaClient" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="PhoneClient" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="EmailClient" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="IdClient" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="CityClient" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="UpdateClient" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="RegClient" alignment="1" min="-2" pref="79" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="NameTxtFieldClient" max="32767" attributes="0"/>
-                      <Component id="LastnPaTxtFieldClient" max="32767" attributes="0"/>
-                      <Component id="LastnMaTxtFieldClient" max="32767" attributes="0"/>
-                      <Component id="PhoneTxtFieldClient" max="32767" attributes="0"/>
-                      <Component id="EmailTxtFieldClient" max="32767" attributes="0"/>
-                      <Component id="IdclientTxtFieldClient" max="32767" attributes="0"/>
-                      <Component id="CityTxtFieldClient" pref="150" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="UpdateClient" max="32767" attributes="0"/>
-                      <Component id="DeleteClient" alignment="0" max="32767" attributes="0"/>
-                      <Component id="ShowClient" alignment="0" max="32767" attributes="0"/>
-                      <Component id="RegClient" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -109,45 +126,50 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="NameRegClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NameTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="RegClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="NameRegClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="NameTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LastnPaClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="LastnPaTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="UpdateClient" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="RegClient" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="LastnMaTxtFieldClient" min="-2" max="-2" attributes="0"/>
+                      <Component id="LastMaClient" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="PhoneTxtFieldClient" min="-2" max="-2" attributes="0"/>
+                      <Component id="PhoneClient" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="LastnPaClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="LastnPaTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ShowClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="LastMaClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="LastnMaTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="UpdateClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="PhoneClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="PhoneTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="DeleteClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="EmailClient" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="EmailTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="EmailClient" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="IdClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="IdclientTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="CityClient" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CityTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CityClient" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="IDTxtFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NameRegClient1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="59" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -178,48 +200,71 @@
             <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="IdClient">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Id cliente:"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="CityClient">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ciudad:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="NameTxtFieldClient">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="LastnPaTxtFieldClient">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="LastnMaTxtFieldClient">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="PhoneTxtFieldClient">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="EmailTxtFieldClient">
-        </Component>
-        <Component class="javax.swing.JTextField" name="IdclientTxtFieldClient">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmailTxtFieldClientActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="CityTxtFieldClient">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="IDTxtFieldClient">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="RegClient">
           <Properties>
             <Property name="text" type="java.lang.String" value="Registrar"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="ShowClient">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Mostrar"/>
-          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegClientActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="UpdateClient">
           <Properties>
             <Property name="text" type="java.lang.String" value="Actualizar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpdateClientActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="DeleteClient">
+        <Component class="javax.swing.JLabel" name="NameRegClient1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Eliminar"/>
+            <Property name="text" type="java.lang.String" value="ID:"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -235,7 +280,36 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="500" height="350"/>
+          <AbsoluteConstraints x="0" y="0" width="500" height="360"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="Consulta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consulta"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConsultaActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="idcliente">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="10" width="40" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
