@@ -157,7 +157,7 @@ public class SignupEmple extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(HeaderRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 400, 40));
+        getContentPane().add(HeaderRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 40));
 
         PanelRegEmpl.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -292,7 +292,7 @@ public class SignupEmple extends javax.swing.JFrame {
                 .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 400, 330));
+        getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 400, 330));
 
         pack();
         setLocationRelativeTo(null);
