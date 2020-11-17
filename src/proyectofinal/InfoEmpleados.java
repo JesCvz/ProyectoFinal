@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package proyectofinal;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -63,6 +65,14 @@ public class InfoEmpleados extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(null,"Error al extraer los datos de la tabla");
          }
     }
+    
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
+    
     public void refresh(){
          try{
                LoginNutriSoft LG = new LoginNutriSoft();
