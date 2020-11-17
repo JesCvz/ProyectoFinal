@@ -5,6 +5,8 @@
  */
 package proyectofinal;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -67,6 +69,12 @@ public class agregarclientes extends javax.swing.JFrame {
          }
     }
 
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
     
     public void agregar()
     {
@@ -139,6 +147,7 @@ public class agregarclientes extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImage(getIconImage());
 
         tabla_cli.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package proyectofinal;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.lang.Math;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -20,7 +23,13 @@ public class ImcCalc extends javax.swing.JFrame {
         this.setTitle("Calculadora IMC");
         this.setResizable(false);
     }
-
+    
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,6 +50,7 @@ public class ImcCalc extends javax.swing.JFrame {
         IMCCalcB = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImage(getIconImage());
 
         PanelBg.setBackground(new java.awt.Color(255, 255, 255));
 

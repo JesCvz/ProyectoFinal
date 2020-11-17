@@ -24,7 +24,7 @@ public class InfoEmpleados extends javax.swing.JFrame {
     
     public InfoEmpleados() {
         initComponents();
-        this.setTitle("Clientes");
+        this.setTitle("Empleados");
         this.setResizable(false);
          try{
                LoginNutriSoft LG = new LoginNutriSoft();
@@ -237,6 +237,9 @@ public class InfoEmpleados extends javax.swing.JFrame {
         BackToMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImage(getIconImage());
+
+        InfoEmpBg.setBackground(new java.awt.Color(255, 255, 255));
 
         tabla_emp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package proyectofinal;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -32,8 +34,15 @@ public class SignupClient extends javax.swing.JFrame {
         this.setResizable(false);
     }
     
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
+    
     public void registrar()
-   {
+    {
        
        String cadena1, cadena2, cadena3, cadena4,cadena5,cadena6,cadena7;    
       cadena1 = NameTxtFieldClient.getText(); //Nombre del empleado
@@ -295,6 +304,8 @@ public class SignupClient extends javax.swing.JFrame {
         idcliente = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HeaderRegClient.setBackground(new java.awt.Color(255, 255, 255));

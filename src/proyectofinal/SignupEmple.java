@@ -5,6 +5,8 @@
  */
 package proyectofinal;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -24,8 +26,15 @@ public class SignupEmple extends javax.swing.JFrame {
         initComponents();
     }
     
-     public void registrar()
-   {
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
+    
+    public void registrar()
+    {
        String cadena1, cadena2, cadena3, cadena4,cadena5,cadena6,cadena7;    
       cadena1 = NameTxtFieldEmpl.getText(); //Nombre del empleado
       cadena2 = LastnPaTxtFieldEmpl.getText();//Apellido Paterno
@@ -111,6 +120,7 @@ public class SignupEmple extends javax.swing.JFrame {
         RegBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HeaderRegEmpl.setBackground(new java.awt.Color(255, 255, 255));
