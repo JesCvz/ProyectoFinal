@@ -19,8 +19,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     SignupEmple R1 = new SignupEmple();
     String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     String usuario = "root";
-//    String contraseña = "JM5038766866"; 
-    String contraseña = ""; 
+    String contraseña = "JM5038766866"; 
     String driver = "com.mysql.cj.jdbc.Driver";
     /**
      * Creates new form LoginNutriSoft
