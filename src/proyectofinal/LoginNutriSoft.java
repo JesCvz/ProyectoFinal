@@ -17,7 +17,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     Connection con =null;
     Statement stmt =null;
     SignupEmple R1 = new SignupEmple();
-    String url = "jdbc:hsqldb:file:C:\\Users\\jes_c\\Documents\\GitHub\\administracionpedidos\\base\\nutrisoft";
+    String url = "jdbc:hsqldb:file:base/nutrisoft";
     String usuario = "nutrisoft";
     String contraseña = "1234"; 
     String driver = "org.hsqldb.jdbcDriver";
