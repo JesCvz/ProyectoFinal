@@ -38,6 +38,8 @@ public class InfoEmpleados extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        InfoEmpBg.setBackground(new java.awt.Color(255, 255, 255));
+
         EmployInfoTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},

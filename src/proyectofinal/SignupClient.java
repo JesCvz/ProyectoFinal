@@ -297,6 +297,8 @@ public class SignupClient extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        HeaderRegClient.setBackground(new java.awt.Color(255, 255, 255));
+
         TitleRegClient.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         TitleRegClient.setText("REGISTRO DE CLIENTES");
 
@@ -319,6 +321,8 @@ public class SignupClient extends javax.swing.JFrame {
 
         getContentPane().add(HeaderRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 240, 40));
 
+        PanelRegClient.setBackground(new java.awt.Color(255, 255, 255));
+
         NameRegClient.setText("Nombre:");
 
         LastnPaClient.setText("Apellido paterno:");
@@ -338,6 +342,7 @@ public class SignupClient extends javax.swing.JFrame {
         });
 
         IDTxtFieldClient.setEditable(false);
+        IDTxtFieldClient.setBackground(new java.awt.Color(255, 255, 255));
 
         RegClient.setText("Registrar");
         RegClient.addActionListener(new java.awt.event.ActionListener() {
