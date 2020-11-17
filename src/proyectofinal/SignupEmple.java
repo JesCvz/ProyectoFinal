@@ -54,31 +54,9 @@ public class SignupEmple extends javax.swing.JFrame {
                     System.out.println("Se ha establecido una conexión a la base de datos "); 
                   stmt = con.createStatement(); 
                   ResultSet rs = stmt.executeQuery("select* from empleados");
-                        //primer registro
-                      if(rs.next()==false)
-                      {
                         stmt.executeUpdate("INSERT INTO empleados(`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `usuario`, `contraseña`) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
                         System.out.println("Los valores han sido agregados a la base de datos");
                         javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                      }
-                      else
-                      {
-                          //checa que no exista un registro ya hecho con ese usuario
-                          rs = stmt.executeQuery("Select* from empleados");
-                          if(rs.next()==true)
-                          {
-                             rs = stmt.executeQuery("select* from empleados where usuario = '"+cadena6+"'");
-                             if(rs.next()==true)
-                                {
-                                javax.swing.JOptionPane.showMessageDialog(this,"¡Ya se registro este usuario!\n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                                }
-                             else
-                                {
-                                stmt.executeUpdate("INSERT INTO empleados(`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `usuario`, `contraseña`) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
-                                javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                                }
-                         }
-                      }
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException ex) {}  
         
         finally {

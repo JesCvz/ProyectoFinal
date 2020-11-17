@@ -349,7 +349,8 @@ public class InfoEmpleados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EmployRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmployRegActionPerformed
-    SE.setVisible(true);        // TODO add your handling code here:
+    SE.setVisible(true);       
+    SE.limpiar();// TODO add your handling code here:
     }//GEN-LAST:event_EmployRegActionPerformed
 
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
