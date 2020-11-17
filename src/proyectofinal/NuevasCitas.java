@@ -5,6 +5,8 @@
  */
 package proyectofinal;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -66,19 +68,24 @@ public class NuevasCitas extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(null,"Error al extraer los datos de la tabla");
          }
     }
-public void registrar()
-   {
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
+    public void registrar(){
        
-       String cadena1, cadena2;
-      cadena1 = sdf.format(txtfechaped.getDate()); //Nombre del empleado
-      cadena2 = txtidcliente.getText();//Apellido Paterno
+        String cadena1, cadena2;
+        cadena1 = sdf.format(txtfechaped.getDate()); //Nombre del empleado
+        cadena2 = txtidcliente.getText();//Apellido Paterno
       
-     if (cadena1.equals("") || (cadena2.equals(""))){
+        if (cadena1.equals("") || (cadena2.equals(""))){
             
-     javax.swing.JOptionPane.showMessageDialog(this,"Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
-     }
+            javax.swing.JOptionPane.showMessageDialog(this,"Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        }
      
-     else {
+        else {
         try {
            
             LoginNutriSoft LG = new LoginNutriSoft();
@@ -119,8 +126,7 @@ public void registrar()
         };
         timer.schedule(tarea, 100);
       
-      
-   }
+    }
     public void refresh(){
         
         try{
@@ -229,6 +235,7 @@ public void registrar()
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setIconImage(getIconImage());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

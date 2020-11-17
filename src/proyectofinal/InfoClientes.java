@@ -5,6 +5,8 @@
  */
 package proyectofinal;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -72,6 +74,13 @@ public class InfoClientes extends javax.swing.JFrame {
          catch(ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException e) {
              JOptionPane.showMessageDialog(null,"Error al extraer los datos de la tabla");
          }
+    }
+    
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
     }
     
     public void refresh(){
@@ -251,6 +260,7 @@ public void borrar(){
         BackToMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImage(getIconImage());
 
         InfoCBg.setBackground(new java.awt.Color(255, 255, 255));
 

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package proyectofinal;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -26,7 +28,12 @@ public class LoginNutriSoft extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Inicio de sesion");
     }
-    
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
     public void inicio()
     {
         String Usuario = "56";
@@ -116,6 +123,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
         bgColor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoOfLogin.png"))); // NOI18N

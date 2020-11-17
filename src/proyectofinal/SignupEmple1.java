@@ -5,6 +5,8 @@
  */
 package proyectofinal;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -26,9 +28,16 @@ public class SignupEmple1 extends javax.swing.JFrame {
         initComponents();
     }
     
+    //CREAMOS METODO SOBREESCRITO PARA ESTABLECER EL ICONO DE NUESTRO SISTEMA.
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/NS.png"));
+        return retValue;
+    }
+    
      public void registrar()
-   {
-       String cadena1, cadena2, cadena3, cadena4,cadena5,cadena6,cadena7;    
+     {
+      String cadena1, cadena2, cadena3, cadena4,cadena5,cadena6,cadena7;    
       cadena1 = NameTxtFieldEmpl.getText(); //Nombre del empleado
       cadena2 = LastnPaTxtFieldEmpl.getText();//Apellido Paterno
       cadena3 = LastnMaTxtFieldEmpl.getText();//Apellido Materno
@@ -299,8 +308,13 @@ public class SignupEmple1 extends javax.swing.JFrame {
         idcliente.setEditable(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        HeaderRegEmpl.setBackground(new java.awt.Color(255, 255, 255));
+
+        TitleRegEmpl.setBackground(new java.awt.Color(255, 255, 255));
         TitleRegEmpl.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         TitleRegEmpl.setText("REGISTRO DE EMPLEADOS");
 
@@ -322,6 +336,8 @@ public class SignupEmple1 extends javax.swing.JFrame {
         );
 
         getContentPane().add(HeaderRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 400, 40));
+
+        PanelRegEmpl.setBackground(new java.awt.Color(255, 255, 255));
 
         NameRegEmpl.setText("Nombre:");
 
@@ -394,6 +410,7 @@ public class SignupEmple1 extends javax.swing.JFrame {
         });
 
         IDTxtFieldEmpl.setEditable(false);
+        IDTxtFieldEmpl.setBackground(new java.awt.Color(255, 255, 255));
         IDTxtFieldEmpl.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 IDTxtFieldEmplKeyTyped(evt);
