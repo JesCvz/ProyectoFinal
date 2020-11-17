@@ -252,6 +252,8 @@ public void borrar(){
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        InfoCBg.setBackground(new java.awt.Color(255, 255, 255));
+
         tabla_cli.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},

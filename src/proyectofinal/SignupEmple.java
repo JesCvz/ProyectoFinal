@@ -135,6 +135,8 @@ public class SignupEmple extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        HeaderRegEmpl.setBackground(new java.awt.Color(255, 255, 255));
+
         TitleRegEmpl.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         TitleRegEmpl.setText("REGISTRO DE EMPLEADOS");
 
@@ -155,7 +157,9 @@ public class SignupEmple extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(HeaderRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 400, 40));
+        getContentPane().add(HeaderRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 40));
+
+        PanelRegEmpl.setBackground(new java.awt.Color(255, 255, 255));
 
         NameRegEmpl.setText("Nombre:");
 
@@ -288,7 +292,7 @@ public class SignupEmple extends javax.swing.JFrame {
                 .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 400, 330));
+        getContentPane().add(PanelRegEmpl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 400, 330));
 
         pack();
         setLocationRelativeTo(null);

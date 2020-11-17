@@ -42,6 +42,8 @@ public class ImcCalc extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        PanelBg.setBackground(new java.awt.Color(255, 255, 255));
+
         CalcTitle.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         CalcTitle.setText("Calcular IMC");
 
