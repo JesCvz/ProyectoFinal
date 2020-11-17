@@ -138,7 +138,7 @@ public class agregarclientes extends javax.swing.JFrame {
         tabla_cli = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         tabla_cli.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
