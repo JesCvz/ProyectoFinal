@@ -34,7 +34,7 @@ public class NuevasCitas extends javax.swing.JFrame {
      */
     public NuevasCitas() {
         initComponents();
-        this.setTitle("Clientes");
+        this.setTitle("Citas");
         this.setResizable(false);
          try{
                LoginNutriSoft LG = new LoginNutriSoft();
@@ -91,7 +91,7 @@ public void registrar()
              if ( con != null ) 
                     System.out.println("Se ha establecido una conexión a la base de datos "); 
                   stmt = con.createStatement(); 
-                        stmt.executeUpdate("INSERT INTO citas(`pacientes_id`, `Fecha`) VALUES('"+cadena2+"','"+cadena1+"')");
+                        stmt.executeUpdate("INSERT INTO citas(pacientes_id, Fecha) VALUES('"+cadena2+"','"+cadena1+"')");
                         System.out.println("Los valores han sido agregados a la base de datos");
                         javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException ex) {}  

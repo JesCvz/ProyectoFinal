@@ -15,10 +15,10 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     Connection con =null;
     Statement stmt =null;
     SignupEmple R1 = new SignupEmple();
-    String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-    String usuario = "root";
-    String contraseña = "JM5038766866"; 
-    String driver = "com.mysql.cj.jdbc.Driver";
+    String url = "jdbc:hsqldb:file:C:\\Users\\jes_c\\Documents\\GitHub\\administracionpedidos\\base\\nutrisoft";
+    String usuario = "nutrisoft";
+    String contraseña = "1234"; 
+    String driver = "org.hsqldb.jdbcDriver";
     /**
      * Creates new form LoginNutriSoft
      */
@@ -38,7 +38,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
      
        cadena1 = UserTxtField.getText();
        cadena2 = PassTxtField.getText();
-       String sql="SELECT* FROM  empleados WHERE usuario = '"+cadena1+"' && contraseña = '"+cadena2+"'"; 
+       String sql="SELECT* FROM  empleados WHERE usuario = '"+cadena1+"' AND contraseña = '"+cadena2+"'"; 
       
       if(UserTxtField.getText().equals(Usuario) && Pass.equals(Contraseña))
         {
@@ -53,15 +53,18 @@ public class LoginNutriSoft extends javax.swing.JFrame {
      else {
      
      try { 
-                
-            Class.forName(driver).newInstance(); 
+            LoginNutriSoft LG = new LoginNutriSoft();
+            String url = LG.url;
+            String usuario = LG.usuario;
+            String contraseña = LG.contraseña; 
+            Class.forName(LG.driver).newInstance(); 
             con = DriverManager.getConnection(url,usuario,contraseña); 
             if ( con != null ) 
             System.out.println("Se ha establecido una conexión a la base de datos " + "\n " + url + "\n"); 
             stmt = con.createStatement(); 
-            rs = stmt.executeQuery("select* from empleados WHERE usuario = '"+cadena1+"' && contraseña = '"+cadena2+"'");
+            rs = stmt.executeQuery("select* from empleados WHERE usuario = '"+cadena1+"' AND contraseña = '"+cadena2+"'");
             if(rs.next())
-            {
+            { 
                rs = stmt.executeQuery(sql);
                while(rs.next()) {
                                   javax.swing.JOptionPane.showMessageDialog(this,"Bienvenido \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);

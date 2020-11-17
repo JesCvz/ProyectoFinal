@@ -56,7 +56,7 @@ public class SignupEmple1 extends javax.swing.JFrame {
                     System.out.println("Se ha establecido una conexión a la base de datos "); 
                   stmt = con.createStatement(); 
                   ResultSet rs = stmt.executeQuery("select* from empleados");
-                        stmt.executeUpdate("INSERT INTO empleados(`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `usuario`, `contraseña`) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
+                        stmt.executeUpdate("INSERT INTO empleados(Nombre, Apellido_Paterno, Apellido_Materno, Telefono, correo_electronico, usuario, contraseña) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
                         System.out.println("Los valores han sido agregados a la base de datos");
                         javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException ex) {}  
@@ -95,7 +95,7 @@ public class SignupEmple1 extends javax.swing.JFrame {
          String cap="";
         ResultSet rs = null;
         var2 = idcliente.getText();
-        String sql2 = "Select `id_empleados`,`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `usuario`, `contraseña`  FROM empleados where `id_empleados` = '"+var2+"'";
+        String sql2 = "Select id_empleados, Nombre, Apellido_Paterno, Apellido_Materno, Telefono, correo_electronico, usuario, contraseña  FROM empleados where id_empleados = '"+var2+"'";
         
         try{
             LoginNutriSoft LG = new LoginNutriSoft();
@@ -119,10 +119,10 @@ public class SignupEmple1 extends javax.swing.JFrame {
             while(rs.next()){
                 String id = rs.getString("id_empleados");
                 String ino = rs.getString("Nombre");
-                String iap = rs.getString("Apellido Paterno");
-                String iam = rs.getString("Apellido Materno");
+                String iap = rs.getString("Apellido_Paterno");
+                String iam = rs.getString("Apellido_Materno");
                 String it = rs.getString("Telefono");
-                String ie = rs.getString("correo electronico");
+                String ie = rs.getString("correo_electronico");
                 String iusr = rs.getString("usuario");
                 String ipass = rs.getString("contraseña");
                 System.out.println("Sitio Web"+(i++)+"\n"
@@ -216,7 +216,7 @@ public class SignupEmple1 extends javax.swing.JFrame {
                   }
                   else
                   {
-                  stmt.executeUpdate("update ignore empleados set `Nombre` = '"+cadena1+"',`Apellido Paterno` = '"+cadena2+"', `Apellido Materno` = '"+cadena3+"', Telefono = '"+cadena4+"', `correo electronico` = '"+cadena5+"', usuario = '"+cadena6+"', contraseña = '"+cadena7+"' where id_empleados = '"+IDTxtFieldEmpl.getText()+"' "); 
+                  stmt.executeUpdate("update empleados set Nombre = '"+cadena1+"',Apellido_Paterno = '"+cadena2+"', Apellido_Materno = '"+cadena3+"', Telefono = '"+cadena4+"', correo_electronico = '"+cadena5+"', usuario = '"+cadena6+"', contraseña = '"+cadena7+"' where id_empleados = '"+IDTxtFieldEmpl.getText()+"' "); 
                   System.out.println("Los valores han sido Actualizados"); 
                   javax.swing.JOptionPane.showMessageDialog(this,"Actualizado correctamente!","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
                   }

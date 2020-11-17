@@ -10,8 +10,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
@@ -47,10 +45,10 @@ public class agregarclientes extends javax.swing.JFrame {
                 
                 modelo = new DefaultTableModel(null,titulos);
                 while(rs.next()){
-                    fila[0]=rs.getString("id_paciente");
+                    fila[0]=rs.getString("id_empleados");
                     fila[1]=rs.getString("Nombre");
-                    fila[2]=rs.getString("Apellido Paterno");
-                    fila[3]=rs.getString("Apellido Materno");
+                    fila[2]=rs.getString("Apellido_Paterno");
+                    fila[3]=rs.getString("Apellido_Materno");
                     
                     modelo.addRow(fila);
                     
@@ -92,12 +90,12 @@ public class agregarclientes extends javax.swing.JFrame {
                                        "\n " + url ); 
   
                   stmt = con.createStatement(); 
-                  ResultSet rs = stmt.executeQuery("select* from pacientes where id_paciente = '"+valor+"'");
+                  ResultSet rs = stmt.executeQuery("select* from pacientes where id_empleados = '"+valor+"'");
                   
                   while(rs.next())
                   {
-                      txtmemTAB.setText(rs.getString("id_paciente"));
-                      txtnomTAB.setText(rs.getString("Nombre")+(" ").concat(rs.getString("Apellido Paterno")+(" ").concat(rs.getString("Apellido Materno"))));
+                      txtmemTAB.setText(rs.getString("id_empleados"));
+                      txtnomTAB.setText(rs.getString("Nombre")+("").concat(rs.getString("Apellido_Paterno")+("").concat(rs.getString("Apellido_Materno"))));
                   }
                   NuevasCitas.txtidcliente.setText(txtmemTAB.getText());
                   NuevasCitas.txtnomcliente.setText(txtnomTAB.getText());

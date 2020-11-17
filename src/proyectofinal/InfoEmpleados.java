@@ -42,10 +42,10 @@ public class InfoEmpleados extends javax.swing.JFrame {
                 while(rs.next()){
                     fila[0]=rs.getString("id_empleados");
                     fila[1]=rs.getString("Nombre");
-                    fila[2]=rs.getString("Apellido Paterno");
-                    fila[3]=rs.getString("Apellido Materno");
+                    fila[2]=rs.getString("Apellido_Paterno");
+                    fila[3]=rs.getString("Apellido_Materno");
                     fila[4]=rs.getString("Telefono");
-                    fila[5]=rs.getString("correo electronico");
+                    fila[5]=rs.getString("correo_electronico");
                     
                     modelo.addRow(fila);
                     
@@ -79,10 +79,10 @@ public class InfoEmpleados extends javax.swing.JFrame {
                 while(rs.next()){
                     fila[0]=rs.getString("id_empleados");
                     fila[1]=rs.getString("Nombre");
-                    fila[2]=rs.getString("Apellido Paterno");
-                    fila[3]=rs.getString("Apellido Materno");
+                    fila[2]=rs.getString("Apellido_Paterno");
+                    fila[3]=rs.getString("Apellido_Materno");
                     fila[4]=rs.getString("Telefono");
-                    fila[5]=rs.getString("correo electronico");
+                    fila[5]=rs.getString("correo_electronico");
                     
                     modelo.addRow(fila);
                     

@@ -47,7 +47,6 @@ public class SignupClient extends javax.swing.JFrame {
             
      javax.swing.JOptionPane.showMessageDialog(this,"Debe llenar todos los campos \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
      }
-     
      else {
         try {
            
@@ -61,7 +60,7 @@ public class SignupClient extends javax.swing.JFrame {
              if ( con != null ) 
                     System.out.println("Se ha establecido una conexión a la base de datos "); 
                   stmt = con.createStatement(); 
-                        stmt.executeUpdate("INSERT INTO pacientes(`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `Dirección`) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"')");
+                        stmt.executeUpdate("INSERT INTO pacientes(Nombre, Apellido_Paterno, Apellido_Materno, Telefono, correo_electronico, Dirección) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"')");
                         System.out.println("Los valores han sido agregados a la base de datos");
                         javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException ex) {}  
@@ -100,7 +99,7 @@ public class SignupClient extends javax.swing.JFrame {
          String cap="";
         ResultSet rs = null;
         var2 = idcliente.getText();
-        String sql2 = "Select `id_paciente`,`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `Dirección`  FROM pacientes where `id_paciente` = '"+var2+"'";
+        String sql2 = "Select id_empleados, Nombre, Apellido_Paterno, Apellido_Materno, Telefono, correo_electronico, Dirección  FROM pacientes where id_empleados = '"+var2+"'";
         
         try{
             LoginNutriSoft LG = new LoginNutriSoft();
@@ -122,12 +121,12 @@ public class SignupClient extends javax.swing.JFrame {
         }
         rs = stmt.executeQuery(sql2);
             while(rs.next()){
-                String id = rs.getString("id_paciente");
+                String id = rs.getString("id_empleados");
                 String ino = rs.getString("Nombre");
-                String iap = rs.getString("Apellido Paterno");
-                String iam = rs.getString("Apellido Materno");
+                String iap = rs.getString("Apellido_Paterno");
+                String iam = rs.getString("Apellido_Materno");
                 String it = rs.getString("Telefono");
-                String ie = rs.getString("correo electronico");
+                String ie = rs.getString("correo_electronico");
                 String idir = rs.getString("Dirección");
                 System.out.println("Sitio Web"+(i++)+"\n"
                 +id+"\n"
@@ -210,14 +209,14 @@ public class SignupClient extends javax.swing.JFrame {
                                        "\n " + url ); 
   
                   stmt = con.createStatement();
-                  ResultSet rs = stmt.executeQuery("select* from pacientes where id_paciente = '"+IDTxtFieldClient.getText()+"'");
+                  ResultSet rs = stmt.executeQuery("select* from pacientes where id_empleados = '"+IDTxtFieldClient.getText()+"'");
                   if(rs.next()==false)
                   {
                       javax.swing.JOptionPane.showMessageDialog(this,"No existe un registro con ese numero de empleado!","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
                   }
                   else
                   {
-                  stmt.executeUpdate("update ignore pacientes set `Nombre` = '"+cadena1+"',`Apellido Paterno` = '"+cadena2+"', `Apellido Materno` = '"+cadena3+"', Telefono = '"+cadena4+"', `correo electronico` = '"+cadena5+"', Dirección = '"+cadena6+"' where id_paciente = '"+IDTxtFieldClient.getText()+"' "); 
+                  stmt.executeUpdate("update pacientes set Nombre = '"+cadena1+"',Apellido_Paterno = '"+cadena2+"', Apellido_Materno = '"+cadena3+"', Telefono = '"+cadena4+"', correo_electronico = '"+cadena5+"', Dirección = '"+cadena6+"' where id_empleados = '"+IDTxtFieldClient.getText()+"' "); 
                   System.out.println("Los valores han sido Actualizados"); 
                   javax.swing.JOptionPane.showMessageDialog(this,"Actualizado correctamente!","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
                   }
@@ -333,11 +332,44 @@ public class SignupClient extends javax.swing.JFrame {
 
         EmailClient.setText("Email:");
 
-        CityClient.setText("Ciudad:");
+        CityClient.setText("Direccion:");
+
+        NameTxtFieldClient.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                NameTxtFieldClientKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NameTxtFieldClientKeyTyped(evt);
+            }
+        });
+
+        LastnPaTxtFieldClient.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                LastnPaTxtFieldClientKeyTyped(evt);
+            }
+        });
+
+        LastnMaTxtFieldClient.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                LastnMaTxtFieldClientKeyTyped(evt);
+            }
+        });
+
+        PhoneTxtFieldClient.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PhoneTxtFieldClientKeyTyped(evt);
+            }
+        });
 
         EmailTxtFieldClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EmailTxtFieldClientActionPerformed(evt);
+            }
+        });
+
+        CityTxtFieldClient.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                CityTxtFieldClientKeyPressed(evt);
             }
         });
 
@@ -478,6 +510,71 @@ public class SignupClient extends javax.swing.JFrame {
     private void UpdateClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateClientActionPerformed
     actualizar();        // TODO add your handling code here:
     }//GEN-LAST:event_UpdateClientActionPerformed
+
+    private void NameTxtFieldClientKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NameTxtFieldClientKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameTxtFieldClientKeyPressed
+
+    private void NameTxtFieldClientKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NameTxtFieldClientKeyTyped
+    char c = evt.getKeyChar();
+        int numerocaracteres=25;
+
+        if(NameTxtFieldClient.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 25 digitos del nombre");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();            // TODO add your handling code here:
+    }//GEN-LAST:event_NameTxtFieldClientKeyTyped
+
+    private void LastnPaTxtFieldClientKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LastnPaTxtFieldClientKeyTyped
+        char c = evt.getKeyChar();
+        int numerocaracteres=25;
+
+        if(LastnPaTxtFieldClient.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 25 digitos del apellido paterno");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();        // TODO add your handling code here:
+    }//GEN-LAST:event_LastnPaTxtFieldClientKeyTyped
+
+    private void LastnMaTxtFieldClientKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LastnMaTxtFieldClientKeyTyped
+        char c = evt.getKeyChar();
+        int numerocaracteres=25;
+
+        if(LastnMaTxtFieldClient.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 25 digitos del apellido paterno");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();   // TODO add your handling code here:
+    }//GEN-LAST:event_LastnMaTxtFieldClientKeyTyped
+
+    private void PhoneTxtFieldClientKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PhoneTxtFieldClientKeyTyped
+        char c = evt.getKeyChar();
+         int numerocaracteres=10;
+        
+        if(PhoneTxtFieldClient.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 10 digitos en el telefono");
+        }
+        
+        if((c<'0' || c> '9')) evt.consume();         // TODO add your handling code here:
+    }//GEN-LAST:event_PhoneTxtFieldClientKeyTyped
+
+    private void CityTxtFieldClientKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CityTxtFieldClientKeyPressed
+    char c = evt.getKeyChar();
+        int numerocaracteres=25;
+
+        if(CityTxtFieldClient.getText().length() >= numerocaracteres)
+        {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 25 digitos del apellido paterno");
+        }
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ')&&(c<'0' || c> '9') ) evt.consume();        // TODO add your handling code here:
+    }//GEN-LAST:event_CityTxtFieldClientKeyPressed
 
     /**
      * @param args the command line arguments

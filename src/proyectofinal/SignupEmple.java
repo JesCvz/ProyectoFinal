@@ -54,7 +54,7 @@ public class SignupEmple extends javax.swing.JFrame {
                     System.out.println("Se ha establecido una conexión a la base de datos "); 
                   stmt = con.createStatement(); 
                   ResultSet rs = stmt.executeQuery("select* from empleados");
-                        stmt.executeUpdate("INSERT INTO empleados(`Nombre`, `Apellido Paterno`, `Apellido Materno`, `Telefono`, `correo electronico`, `usuario`, `contraseña`) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
+                        stmt.executeUpdate("INSERT INTO empleados(Nombre, Apellido_Paterno, Apellido_Materno, Telefono, correo_electronico, usuario, contraseña) VALUES('"+cadena1+"','"+cadena2+"','"+cadena3+"','"+cadena4+"','"+cadena5+"','"+cadena6+"','"+cadena7+"')");
                         System.out.println("Los valores han sido agregados a la base de datos");
                         javax.swing.JOptionPane.showMessageDialog(this,"Registro exitoso! \n","AVISO!",javax.swing.JOptionPane.INFORMATION_MESSAGE);
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException ex) {}  
@@ -331,15 +331,7 @@ public class SignupEmple extends javax.swing.JFrame {
     }//GEN-LAST:event_LastnMaTxtFieldEmplKeyTyped
 
     private void EmailTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_EmailTxtFieldEmplKeyTyped
-        char c = evt.getKeyChar();
-        int numerocaracteres=30;
-
-        if(EmailTxtFieldEmpl.getText().length() >= numerocaracteres)
-        {
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Solo se pueden 30 digitos para el correo electronico");
-        }
-        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();    // TODO add your handling code here:
+    // TODO add your handling code here:
     }//GEN-LAST:event_EmailTxtFieldEmplKeyTyped
 
     private void UserTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UserTxtFieldEmplKeyTyped
@@ -351,7 +343,7 @@ public class SignupEmple extends javax.swing.JFrame {
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se pueden 10 digitos de usuario");
         }
-        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();  // TODO add your handling code here:
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ')&& (c<'0' || c> '9') ) evt.consume();  // TODO add your handling code here:
     }//GEN-LAST:event_UserTxtFieldEmplKeyTyped
 
     private void PassTxtFieldEmplKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PassTxtFieldEmplKeyTyped
@@ -363,7 +355,7 @@ public class SignupEmple extends javax.swing.JFrame {
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se pueden 10 digitos de contraseña");
         }
-        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ') ) evt.consume();    // TODO add your handling code here:
+        if((c<'a' || c>'z') && (c<'A' || c> 'Z') && (c<' ' || c> ' ')&& (c<'0' || c> '9') ) evt.consume();    // TODO add your handling code here:
     }//GEN-LAST:event_PassTxtFieldEmplKeyTyped
 
     /**

@@ -48,12 +48,12 @@ public class InfoClientes extends javax.swing.JFrame {
                 
                 modelo = new DefaultTableModel(null,titulos);
                 while(rs.next()){
-                    fila[0]=rs.getString("id_paciente");
+                    fila[0]=rs.getString("id_empleados");
                     fila[1]=rs.getString("Nombre");
-                    fila[2]=rs.getString("Apellido Paterno");
-                    fila[3]=rs.getString("Apellido Materno");
+                    fila[2]=rs.getString("Apellido_Paterno");
+                    fila[3]=rs.getString("Apellido_Materno");
                     fila[4]=rs.getString("Telefono");
-                    fila[5]=rs.getString("correo electronico");
+                    fila[5]=rs.getString("correo_electronico");
                     fila[6]=rs.getString("Dirección");
                     
                     modelo.addRow(fila);
@@ -88,12 +88,12 @@ public class InfoClientes extends javax.swing.JFrame {
                 
                 modelo = new DefaultTableModel(null,titulos);
                 while(rs.next()){
-                    fila[0]=rs.getString("id_paciente");
+                    fila[0]=rs.getString("id_empleados");
                     fila[1]=rs.getString("Nombre");
-                    fila[2]=rs.getString("Apellido Paterno");
-                    fila[3]=rs.getString("Apellido Materno");
+                    fila[2]=rs.getString("Apellido_Paterno");
+                    fila[3]=rs.getString("Apellido_Materno");
                     fila[4]=rs.getString("Telefono");
-                    fila[5]=rs.getString("correo electronico");
+                    fila[5]=rs.getString("correo_electronico");
                     fila[6]=rs.getString("Dirección");
                     
                     modelo.addRow(fila);
@@ -143,12 +143,12 @@ public class InfoClientes extends javax.swing.JFrame {
                                        "\n " + url ); 
   
                   stmt = con.createStatement(); 
-                  ResultSet rs = stmt.executeQuery("select* from pacientes where id_paciente = '"+valor+"'");
+                  ResultSet rs = stmt.executeQuery("select* from pacientes where id_empleados = '"+valor+"'");
                   
                   while(rs.next())
                   {
-                      idcliente.setText(rs.getString("id_paciente"));
-                      System.out.print(rs.getString("id_paciente"));
+                      idcliente.setText(rs.getString("id_empleados"));
+                      System.out.print(rs.getString("id_empleados"));
                   }
                   
                   SignupClient.idcliente.setText(idcliente.getText());
@@ -205,7 +205,7 @@ public void borrar(){
                 if(con != null)
                     System.out.println("Se ha establecido una conexion a la base de datos"+"\n"+url);
                 stmt = con.createStatement();
-                stmt.executeUpdate("DELETE FROM pacientes WHERE id_paciente = '"+valor+"'");
+                stmt.executeUpdate("DELETE FROM pacientes WHERE id_empleados = '"+valor+"'");
                 
                 System.out.println("El registro fue eliminado");
                 
