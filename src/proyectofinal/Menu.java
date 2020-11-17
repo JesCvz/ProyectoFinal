@@ -6,7 +6,6 @@
 
 package proyectofinal;
 
-import java.awt.Toolkit;
 import ventanas.NuevasCitas;
 
 /**
@@ -19,6 +18,7 @@ public class Menu extends javax.swing.JFrame {
     NuevasCitas NC = new NuevasCitas(); //Cambio de nombre a citas
     SignupClient R2 = new SignupClient(); //Cambio de nombre a Registro Clientes
     LoginNutriSoft Lgn = new LoginNutriSoft();
+    InfoEmpleados E1 = new InfoEmpleados();
     /** Creates new form Menu */
         public Menu() {
         initComponents();
@@ -122,7 +122,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+    E1.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

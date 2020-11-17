@@ -17,6 +17,8 @@ public class ImcCalc extends javax.swing.JFrame {
      */
     public ImcCalc() {
         initComponents();
+        this.setTitle("Calculadora IMC");
+        this.setResizable(false);
     }
 
     /**

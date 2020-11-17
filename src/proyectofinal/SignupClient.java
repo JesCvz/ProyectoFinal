@@ -432,14 +432,14 @@ public class SignupClient extends javax.swing.JFrame {
                 .addGroup(PanelRegClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(IDTxtFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NameRegClient1))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
-        getContentPane().add(PanelRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 450, 320));
+        getContentPane().add(PanelRegClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 450, 350));
 
         bgColor.setBackground(new java.awt.Color(255, 255, 255));
         bgColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/white-background-2.jpg"))); // NOI18N
-        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 360));
+        getContentPane().add(bgColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 390));
 
         Consulta.setText("Consulta");
         Consulta.addActionListener(new java.awt.event.ActionListener() {

@@ -115,6 +115,7 @@ public class InfoClientes extends javax.swing.JFrame {
         
     }
     
+    
     public void consulta(){
        int fila = tabla_cli.getSelectedRow()+1;
         System.out.println(fila);
