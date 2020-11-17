@@ -18,6 +18,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
     String url = "jdbc:mysql://localhost:3306/nutrisoft?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     String usuario = "root";
     String contraseña = "JM5038766866"; 
+    String driver = "com.mysql.cj.jdbc.Driver";
     /**
      * Creates new form LoginNutriSoft
      */
@@ -53,7 +54,7 @@ public class LoginNutriSoft extends javax.swing.JFrame {
      
      try { 
                 
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+            Class.forName(driver).newInstance(); 
             con = DriverManager.getConnection(url,usuario,contraseña); 
             if ( con != null ) 
             System.out.println("Se ha establecido una conexión a la base de datos " + "\n " + url + "\n"); 

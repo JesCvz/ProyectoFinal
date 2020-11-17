@@ -6,8 +6,6 @@
 
 package proyectofinal;
 
-import ventanas.NuevasCitas;
-
 /**
  *
  * @author jes_c

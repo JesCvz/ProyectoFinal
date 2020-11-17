@@ -50,7 +50,7 @@ public class SignupEmple1 extends javax.swing.JFrame {
             String usuario = LG.usuario;
             String contraseña = LG.contraseña; 
             System.out.print(url);
-             Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+             Class.forName(LG.driver).newInstance(); 
              con = DriverManager.getConnection(url,usuario,contraseña); 
              if ( con != null ) 
                     System.out.println("Se ha establecido una conexión a la base de datos "); 
@@ -102,7 +102,7 @@ public class SignupEmple1 extends javax.swing.JFrame {
                String url = LG.url;
                String usuario = LG.usuario;
                String contraseña = LG.contraseña; 
-               Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+               Class.forName(LG.driver).newInstance();
         con = DriverManager.getConnection(url,usuario,contraseña);
         if(con != null)
             System.out.println("Se ha establicido una conexión a la base de datos"+"\n"+url);
@@ -202,7 +202,7 @@ public class SignupEmple1 extends javax.swing.JFrame {
                String url = LG.url;
                String usuario = LG.usuario;
                String contraseña = LG.contraseña; 
-               Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+               Class.forName(LG.driver).newInstance();
                   con = DriverManager.getConnection(url,usuario,contraseña); 
                   if ( con != null ) 
                     System.out.println("Se ha establecido una conexión a la base de datos " +  

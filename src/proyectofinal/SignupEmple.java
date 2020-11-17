@@ -48,7 +48,7 @@ public class SignupEmple extends javax.swing.JFrame {
             String usuario = LG.usuario;
             String contraseña = LG.contraseña; 
             System.out.print(url);
-             Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+             Class.forName(LG.driver).newInstance(); 
              con = DriverManager.getConnection(url,usuario,contraseña); 
              if ( con != null ) 
                     System.out.println("Se ha establecido una conexión a la base de datos "); 
